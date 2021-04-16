@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CompanyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +15,7 @@ use App\Http\Controllers\UserController;
 |
 */
 // ruta de tipo get (link en la web, utilizando la clase UserController y su funcion index)
-route::get('users',[UserController::class,'index']);
+route::get('usuarios',[UserController::class,'index']);
+
+// ruta de tipo get (link en la web, llamar a la clase CompanyController y su funcion index)
+route::get('empresas',[CompanyController::class, 'index']);

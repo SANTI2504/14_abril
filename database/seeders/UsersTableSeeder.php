@@ -16,10 +16,11 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        //declarar la variable faker para llamar a Faker
+        //declarar la variable faker para llamar a Faker y hacemos uso de la libreria
         $faker = Faker::create();
 
-        for ($i=0; $i<=20;$i++){
+        //creamos ciclo para generar n cantidad de datos
+        for ($i=0; $i<=20; $i++){
             //llama al modelo para crear datos a la bd
             User::create([
                 'name'=> $faker->name,
