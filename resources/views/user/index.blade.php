@@ -13,6 +13,7 @@
 <div class="container">
     <div class="row">
         <div class="col mt-5" >
+            <a href="{{url('usuarios/crear')}}" class="btn btn-success mb-3">Crear un nuevo usuario</a>
             <table class="table table-dark table-hover">
                 <thead>
                 <tr>
@@ -20,6 +21,8 @@
                     <th scope="col">NOMBRE</th>
                     <th scope="col">APELLIDO</th>
                     <th scope="col">CORREO </th>
+                    <th scope="col">OPCIONES </th>
+
                 </tr>
                 </thead>
                 <tbody>
@@ -31,6 +34,12 @@
                             <td>{{$user-> name}}</td>
                             <td>{{$user-> lastname}}</td>
                             <td>{{$user-> email}}</td>
+                            <td >
+                                <!--mandamos la ruta especifica para ese boton y la variable id-->
+                                <a href="{{url('usuarios', $user->id)}}" class="btn btn-sm btn-info">Detalles</a>
+                                <a href="" class="btn btn-sm btn-warning">Editar</a>
+                                <a href="" class="btn btn-sm btn-danger">Eliminar</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
